@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_questionnaire_details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/abouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_margin="20dp"/>
+        <View
+            android:id="@+id/divider"
+            android:layout_below="@id/abouts"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/blackdividerbg"/>
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/Interpretation"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_below="@id/Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_border"/>
+
+        <TextView
+            android:id="@+id/Further_Info"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:layout_below="@id/Interpretation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/further_information"/>
+    </RelativeLayout>
+</ScrollView>

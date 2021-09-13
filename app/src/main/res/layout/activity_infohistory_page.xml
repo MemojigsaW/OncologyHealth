@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.InfoHistoryPage"
+    android:id="@+id/infoPageLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/initreg_TV_title_demographics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textSize="24sp"
+                    android:text="Demographics" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name" />
+
+                    <EditText
+                        android:id="@+id/initreg_ET_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:layout_below="@+id/initreg_TV_labelname"
+                        android:inputType="textPersonName"
+                        android:hint="Enter name"
+                        android:text="" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelbirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Date of Birth" />
+
+                    <TextView
+                        android:id="@+id/initreg_TV_showbirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:ems="10"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/initreg_TV_labelbirth"
+                        android:text="Enter Birthday" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:id="@+id/initreg_TV_labelgender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"/>
+                    <Spinner
+                        android:id="@+id/initreg_SP_gender"
+                        android:layout_toEndOf="@+id/initreg_TV_labelgender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:id="@+id/initreg_TV_labelPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone" />
+                    <EditText
+                        android:id="@+id/initreg_ET_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_below="@id/initreg_TV_labelPhone"
+                        android:inputType="phone"
+                        android:hint="Enter Phone"
+                        android:text="" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelEContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="E-Contact" />
+                    <EditText
+                        android:id="@+id/initreg_ET_EContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_below="@id/initreg_TV_labelEContact"
+                        android:inputType="phone"
+                        android:hint="Emergency Contact"
+                        android:text="" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labeldietary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dietary Restriction" />
+                    <EditText
+                        android:id="@+id/initreg_ET_dietary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_below="@id/initreg_TV_labeldietary"
+                        android:inputType="text"
+                        android:hint="Dietary Restriction"
+                        android:text="" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelallergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Allergy"/>
+
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_allergy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelallergy"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_allergy_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:onClick="selectAllergy"
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_allergy_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+                            android:onClick="selectAllergy"
+                            android:text="No"/>
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/initreg_ET_allergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Allergies"
+                    android:inputType="text"
+                    android:visibility="gone"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:id="@+id/initreg_TV_title_familyhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textSize="24sp"
+                    android:text="Family History" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelheart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Heart Disease in Family"/>
+
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_heart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelheart"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_heart_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_heart_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+                            android:text="No"/>
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelcancer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Cancer in Family"/>
+
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_cancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelcancer"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_cancer_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_cancer_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+                            android:text="No"/>
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelhereditary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Hereditary Diseases"/>
+
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_hereditary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelhereditary"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_hereditary_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_hereditary_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+                            android:text="No"/>
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/initreg_TV_title_medicalhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textSize="24sp"
+                    android:text="Medical History" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelSurgery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Past Surgery"
+                        />
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_surgery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelSurgery"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_surgery_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:onClick="selectSurgery"
+
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_surgery_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+
+                            android:onClick="selectSurgery"
+                            android:text="No"/>
+                    </RadioGroup>
+
+
+                    <RelativeLayout
+                        android:id="@+id/initreg_surgeryhidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@+id/initreg_RG_surgery">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/initreg_RV_surgery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"/>
+                    <Button
+                        android:id="@+id/initreg_BT_addsurgery"
+                        android:layout_below="@+id/initreg_RV_surgery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+                        android:textColor="@android:color/black"
+                        android:text="+"
+                        />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labeltransfusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Blood Transfusion"
+                        />
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_transfusion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labeltransfusion"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_transfusion_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:onClick="selectTransfusion"
+
+                            android:layout_marginEnd="20dp"
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_transfusion_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+
+
+                            android:onClick="selectTransfusion"
+                            android:text="No"/>
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:id="@+id/initreg_transfusionhidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/initreg_RG_transfusion"
+                        android:visibility="gone"
+                        >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/initreg_RV_transfusion"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/initreg_BT_addtransfusion"
+                        android:layout_below="@+id/initreg_RV_transfusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+                        android:textColor="@android:color/black"
+                        android:text="+"
+                        />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelsmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Smoking History"
+                        />
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_smoke"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelsmoke"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_smoke_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+
+                            android:onClick="selectSmoke"
+
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_smoke_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+               android:onClick="selectSmoke"
+                            android:checked="true"
+                            android:text="No"/>
+                    </RadioGroup>
+                    <include
+                        android:id="@+id/smoke_subview"
+                        layout="@layout/subview1_initreg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/initreg_RG_smoke"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labeldrug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Drug History"
+                        />
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_drug"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labeldrug"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_drug_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+
+                            android:onClick="selectDrug"
+
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_drug_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+
+                            android:onClick="selectDrug"
+                            android:checked="true"
+                            android:text="No"/>
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/initreg_ET_drug"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/initreg_RG_drug"
+                        android:ems="10"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Past Drug"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        android:text=""
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/initreg_TV_labelalcohol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+
+                        android:text="Alcohol use"
+
+                        />
+                    <RadioGroup
+                        android:id="@+id/initreg_RG_alcohol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/initreg_TV_labelalcohol"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/initreg_RB_alcohol_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+
+                            android:onClick="selectAlcohol"
+
+                            android:text="Yes"/>
+                        <RadioButton
+                            android:id="@+id/initreg_RB_alcohol_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:checked="true"
+
+                            android:onClick="selectAlcohol"
+                            android:text="No"/>
+                    </RadioGroup>
+                    <include
+                        android:id="@+id/alcohol_subview"
+                        layout="@layout/subview1_initreg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/initreg_RG_alcohol"/>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+                <Button
+                    android:id="@+id/initreg_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="20dp"
+                    android:text="Submit">
+
+                </Button>
+
+
+
+
+            </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

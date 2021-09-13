@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/subview1_startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Start Date" />
+
+    <TextView
+        android:id="@+id/subview1_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/subview1_startdate"
+        android:layout_margin="10dp"
+        android:text="to"/>
+
+    <TextView
+        android:id="@+id/subview1_enddate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/subview1_to"
+        android:visibility="gone"
+        android:text="End Date" />
+
+    <CheckBox
+        android:id="@+id/subview1_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/subview1_enddate"
+        android:checked="true"
+        android:text="Current" />
+
+    <TextView
+        android:id="@+id/subview1_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subview1_check"
+        android:text="asdf"/>
+
+    <EditText
+        android:id="@+id/subview1_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/subview1_des"
+        android:layout_below="@id/subview1_check"
+        android:ems="3"
+        android:maxLength="3"
+        android:inputType="numberSigned" />
+</RelativeLayout>

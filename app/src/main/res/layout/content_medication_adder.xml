@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MedicationAdder"
+    tools:showIn="@layout/activity_medication_adder">
+
+    <EditText
+        android:id="@+id/medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/medicine_name"
+        android:inputType="text"
+        tools:ignore="Autofill" />
+    <!--add time selecter// change the //set date to init date-->
+    <!--repeats;#dosis;#frequency/#interval;/#pills per repeat-->
+    <Button
+        android:id="@+id/btnPickInitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/medicine_name"
+        android:layout_marginTop="10dp"
+        android:text="@string/start_of_medication"
+        />
+    <TextView
+        android:id="@+id/startofRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/btnPickInitTime"
+        android:text="@string/select_time"
+        tools:ignore="Autofill" />
+    <!---->
+    <Button
+        android:id="@+id/btnPickType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/startofRepeat"
+        android:layout_marginTop="10dp"
+        android:text="Medication type"
+        />
+    <TextView
+        android:id="@+id/selectedType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/btnPickType"
+        android:text="medication type"
+        tools:ignore="Autofill" />
+    <!---->
+
+    <EditText
+        android:id="@+id/medication_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/interval"
+        android:layout_below ="@+id/selectedType"
+        android:inputType="number"
+        tools:ignore="Autofill" />
+    <EditText
+        android:id="@+id/medication_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/storage"
+        android:layout_below ="@+id/medication_interval"
+        android:inputType="number"
+        tools:ignore="Autofill" />
+    <EditText
+        android:id="@+id/dosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/dosis"
+        android:layout_below ="@+id/medication_storage"
+        android:inputType="number"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/btnAddMedication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_medication"
+        />
+
+</RelativeLayout>

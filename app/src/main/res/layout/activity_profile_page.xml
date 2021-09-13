@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activity.ProfilePage">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/profile_appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <include layout="@layout/toolbar_profilepage">
+
+            </include>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/profile_appbarlayout">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/orangeLight"
+                    android:paddingStart="30dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="30dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardavatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="center"
+                        app:cardCornerRadius="160dp">
+
+                        <ImageView
+                            android:id="@+id/img_view"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            app:srcCompat="@mipmap/ic_defaultavatar_foreground" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/profileusername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toEndOf="@id/cardavatar"
+                        android:text="" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/lightorangegradient1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:gravity="center"
+                    android:text="Tip of the Day"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/blackdividerbg" />
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/VP_healthtip"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/questionnaireSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/questionpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_question_foreground" />
+
+                            <TextView
+                                android:id="@+id/questionnaire_title"
+                                android:textSize="15sp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/questionpic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Questionnaires"
+                                android:textColor="@color/grayLight"
+                                />
+
+                            <View
+                                android:id="@+id/questionnaire_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/questionnaire_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/questionnaire_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Answer specialized questionnnaires for an objective evaluation."
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/infopageSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/infopic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_info_foreground" />
+
+                            <TextView
+                                android:id="@+id/infopage_title"
+                                android:textSize="15sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/infopic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Personal Info"
+                                android:textColor="@color/grayLight" />
+
+                            <View
+                                android:id="@+id/infopage_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/infopage_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/infopage_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Update or view personal information, medical history and past diagnosis"
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/appointmentSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/appointmentpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_calendarpic_foreground" />
+
+                            <TextView
+                                android:id="@+id/appointment_title"
+                                android:textSize="15sp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@id/appointmentpic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Appointments"
+                                android:textColor="@color/grayLight" />
+                            <View
+                                android:id="@+id/appointment_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/appointment_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/appointment_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Make or update medical appointments"
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/medicationSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/medicationpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_medicationpic_foreground" />
+
+                            <TextView
+                                android:id="@+id/medication_title"
+                                android:textSize="15sp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@id/medicationpic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Medications"
+                                android:textColor="@color/grayLight" />
+                            <View
+                                android:id="@+id/medication_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/medication_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/medication_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Make or update medications"
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/TimeLineSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/timelinepic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_timline_foreground" />
+
+                            <TextView
+                                android:id="@+id/timeline_title"
+                                android:textSize="15sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@id/timelinepic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Timeline"
+                                android:textColor="@color/grayLight" />
+                            <View
+                                android:id="@+id/timeline_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/timeline_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/timeline_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="View completed appointments and treatments"
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/ShareSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayLight">
+
+                            <ImageView
+                                android:id="@+id/Sharepic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/ic_share_foreground" />
+
+                            <TextView
+                                android:id="@+id/Share_title"
+                                android:textSize="15sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@id/Sharepic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:text="Sharing Info"
+                                android:textColor="@color/grayLight" />
+                            <View
+                                android:id="@+id/Share_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@id/Share_title"
+                                android:background="@drawable/orangedividerbg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/Share_divider"
+                                android:background="@color/orangeDark"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:minLines="3"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Share your information with others or view other's information"
+                                android:textColor="@color/grayLight"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

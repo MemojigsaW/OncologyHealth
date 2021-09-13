@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AppointmentAdder"
+    tools:showIn="@layout/activity_appointment_adder">
+    <EditText
+        android:id="@+id/appointment_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/appointment_location"
+        android:inputType="text"
+        tools:ignore="Autofill" />
+    <Button
+        android:id="@+id/btnPickType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/appointment_location"
+        android:layout_marginTop="20dp"
+        android:text="@string/select_appointment_type"
+        />
+    <TextView
+        android:id="@+id/selectedType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/btnPickType"
+        android:text="@string/office_appointment"
+        tools:ignore="Autofill" />
+    <Button
+        android:id="@+id/btnPickTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/selectedType"
+        android:layout_marginTop="20dp"
+        android:text="@string/select_time"
+        />
+    <TextView
+        android:id="@+id/selectedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below ="@+id/btnPickTime"
+        android:text="@string/select_time"
+        tools:ignore="Autofill" />
+    <EditText
+        android:id="@+id/appointment_physcian_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/physcian_name"
+        android:layout_below ="@+id/selectedTime"
+        android:inputType="textPersonName"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/btnAddAppointmnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_appointment"
+        />
+
+</RelativeLayout>

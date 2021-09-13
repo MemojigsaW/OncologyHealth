@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uhealth">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UHealth">
+        <activity android:name=".Activity.QuestionnaireResults"
+            android:parentActivityName=".Activity.Questionnaire"></activity>
+        <activity
+            android:name=".Activity.PastDiagnosis"
+            android:parentActivityName=".Activity.ProfilePage" />
+        <activity
+            android:name=".AppointmentUpdater"
+            android:label="@string/title_activity_appointment_updater"
+            android:parentActivityName=".AppointmnetList"
+            android:theme="@style/Theme.UHealth.NoActionBar" />
+        <activity
+            android:name=".Activity.ShareFeature"
+            android:parentActivityName=".Activity.ProfilePage"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.DisplayFullImage"
+            android:parentActivityName=".Activity.Timeline"
+            android:theme="@style/Theme.UHealth.nobar" />
+        <activity
+            android:name=".Activity.Timeline"
+            android:parentActivityName=".Activity.ProfilePage" />
+
+        <receiver
+            android:name=".MyAlarmReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".Activity.Do_questions"
+            android:parentActivityName=".Activity.Questionnaire" />
+        <activity
+            android:name=".Activity.Questionnaire"
+            android:parentActivityName=".Activity.ProfilePage" />
+        <activity
+            android:name=".Activity.ProfilePage"
+            android:exported="true"
+            android:parentActivityName=".Activity.MainActivity"
+            android:theme="@style/Theme.UHealth.nobar" />
+        <activity
+            android:name=".Activity.InfoHistoryPage"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing"
+            android:parentActivityName=".Activity.ProfilePage" />
+        <activity
+            android:name=".Activity.SignUpPage"
+            android:exported="true"
+            android:noHistory="true"
+            android:parentActivityName=".Activity.LoginPage"
+            android:theme="@style/Theme.UHealth" />
+        <activity
+            android:name=".Activity.LoginPage"
+            android:exported="true"
+            android:theme="@style/Theme.UHealth.nobar" />
+        <activity
+            android:name=".MedicationAdder"
+            android:label="Add a Medication Plan"
+            android:parentActivityName=".MedicationList"
+           />
+        <activity
+            android:name=".AppointmentAdder"
+            android:label="Add an Appointment"
+            android:parentActivityName=".AppointmnetList"
+            />
+        <activity
+            android:name=".MedicationList"
+            android:label="List of Medication plans"
+            android:parentActivityName=".Activity.ProfilePage"
+             />
+        <activity
+            android:name=".AppointmnetList"
+            android:label="@string/listofappointments"
+            android:parentActivityName=".Activity.ProfilePage"
+            />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/DF_outstanding_accept_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orangeDark"
+            android:text="Request from: user"
+            android:padding="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/DF_outstanding_accept_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:layout_below="@id/DF_outstanding_accept_title"
+            android:text="@string/DF_outstanding_accept_explain"
+            android:background="@drawable/textview_border"/>
+
+        <CheckBox
+            android:id="@+id/DF_outstanding_accept_personalandmedical"
+            android:layout_below="@id/DF_outstanding_accept_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Personal Information and Medical History"/>
+
+        <CheckBox
+            android:id="@+id/DF_outstanding_accept_diagnosis"
+            android:layout_below="@id/DF_outstanding_accept_personalandmedical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Past Diagnosis"/>
+
+        <CheckBox
+            android:id="@+id/DF_outstanding_accept_timeline"
+            android:layout_below="@id/DF_outstanding_accept_diagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Timeline"/>
+
+        <Button
+            android:id="@+id/DF_outstanding_accept_share"
+            android:layout_below="@id/DF_outstanding_accept_timeline"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"/>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

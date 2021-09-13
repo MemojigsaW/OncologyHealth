@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grayLight"
+            >
+
+            <RelativeLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orangeLight">
+
+                <TextView
+                    android:id="@+id/Accepted_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="View xxx "/>
+
+                <RelativeLayout
+                    android:id="@+id/Accepted_belowtitlelayout"
+                    android:layout_below="@id/Accepted_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/Accepted_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingStart="10dp"
+                        android:text="Email"/>
+
+                    <TextView
+                        android:id="@+id/Accepted_expire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Accepted_email"
+                        android:paddingStart="10dp"
+                        android:text="Expire on"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RadioGroup
+                android:id="@+id/Accepted_RG"
+                android:layout_below="@id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <RadioButton
+                    android:id="@+id/Accepted_InfoandHistroy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/orangeDark"
+                    android:text="Personal Info and Medical History"/>
+                <RadioButton
+                    android:id="@+id/Accepted_Diagnosis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/orangeDark"
+                    android:text="Past Diagnosis"/>
+                <RadioButton
+                    android:id="@+id/Accepted_Timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/orangeDark"
+                    android:text="Timeline"/>
+            </RadioGroup>
+            <Button
+                android:id="@+id/Accepted_view"
+                android:layout_below="@+id/Accepted_RG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="View"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

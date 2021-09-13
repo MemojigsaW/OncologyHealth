@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayLight"
+    app:cardCornerRadius="20dp"
+    tools:context=".Fragments.TimelineFilter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tlfilter_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orangeDark"
+            android:text="     Filter Options"
+            android:textSize="20sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tlfilter_filteroption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tlfilter_title" />
+
+        <ToggleButton
+            android:id="@+id/tlfilter_datetoggle"
+            android:layout_below="@id/tlfilter_filteroption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textOn="Select Year"
+            android:textOff="All Time"
+            />
+
+        <NumberPicker
+            android:id="@+id/tlfilter_date"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tlfilter_datetoggle" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
